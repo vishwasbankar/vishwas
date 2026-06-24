@@ -8,14 +8,13 @@ app.use(express.json());
 app.use(cookieParser());
 
 const allowedOrigins = [
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "https://your-frontend-domain.onrender.com"
+  "http://localhost:5173",
+  "https://your-frontend-domain.onrender.com"
 ];
 
 app.use(cors({
-    origin: allowedOrigins,
-    credentials: true
+  origin: true,
+  credentials: true
 }));
 
 const authRouter = require("./routes/auth.routes");
